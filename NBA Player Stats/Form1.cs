@@ -16,7 +16,7 @@ namespace NBA_Player_Stats
         {
             if(!String.IsNullOrEmpty(textBox1.Text))
             {
-                WebRequest req = WebRequest.Create("http://www.nba.com/plaerfile/"+textBox1.Text.Replace(" ","_").ToLower()+"/");
+                WebRequest req = WebRequest.Create("http://www.nba.com/playerfile/"+textBox1.Text.Replace(" ","_").ToLower()+"/");
                 StreamReader stream = new StreamReader(req.GetResponse().GetResponseStream());
                 StringBuilder sb = new StringBuilder();
                 string strLine;
